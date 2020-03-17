@@ -8,18 +8,26 @@
   <link rel="dns-prefetch" href="https://IthinkIcandoit.github.io">
   <title>flask基础 | 祈福ing</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Flask框架1.框架介绍Flask诞生于2010年，是Armin ronacher（人名）用 Python 语言编写的 **轻量级Web开发框架** ，其本身相当于一个内核，主要实现路**由分发和模板渲染功能**。Flask中常用的扩展包：  Flask-SQLalchemy：ORM操作数据库； Flask-RESTful：开发REST API的工具； Flask-Session：Session">
+  <meta name="description" content="Flask框架1.框架介绍Flask诞生于2010年，是Armin ronacher（人名）用 Python 语言编写的 **轻量级Web开发框架** ，其本身相当于一个内核，主要实现路**由分发和模板渲染功能**。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="flask基础">
 <meta property="og:url" content="https:&#x2F;&#x2F;ithinkicandoit.github.io&#x2F;2020&#x2F;03&#x2F;17&#x2F;flask%E5%9F%BA%E7%A1%80&#x2F;index.html">
 <meta property="og:site_name" content="祈福ing">
-<meta property="og:description" content="Flask框架1.框架介绍Flask诞生于2010年，是Armin ronacher（人名）用 Python 语言编写的 **轻量级Web开发框架** ，其本身相当于一个内核，主要实现路**由分发和模板渲染功能**。Flask中常用的扩展包：  Flask-SQLalchemy：ORM操作数据库； Flask-RESTful：开发REST API的工具； Flask-Session：Session">
+<meta property="og:description" content="Flask框架1.框架介绍Flask诞生于2010年，是Armin ronacher（人名）用 Python 语言编写的 **轻量级Web开发框架** ，其本身相当于一个内核，主要实现路**由分发和模板渲染功能**。">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="http:&#x2F;&#x2F;my-picture-1258042328.cos.ap-shanghai.myqcloud.com&#x2F;flask%E5%9F%BA%E7%A1%80&#x2F;20200317011412171.png">
 <meta property="og:image" content="http:&#x2F;&#x2F;my-picture-1258042328.cos.ap-shanghai.myqcloud.com&#x2F;flask%E5%9F%BA%E7%A1%80&#x2F;20200317012812076.png">
 <meta property="og:image" content="http:&#x2F;&#x2F;my-picture-1258042328.cos.ap-shanghai.myqcloud.com&#x2F;flask%E5%9F%BA%E7%A1%80&#x2F;20200317012830026.png">
 <meta property="og:image" content="http:&#x2F;&#x2F;my-picture-1258042328.cos.ap-shanghai.myqcloud.com&#x2F;flask%E5%9F%BA%E7%A1%80&#x2F;20200317012846043.png">
-<meta property="og:updated_time" content="2020-03-17T05:28:59.055Z">
+<meta property="og:image" content="http:&#x2F;&#x2F;my-picture-1258042328.cos.ap-shanghai.myqcloud.com&#x2F;flask%E5%9F%BA%E7%A1%80&#x2F;20200317015832434.png">
+<meta property="og:image" content="http:&#x2F;&#x2F;my-picture-1258042328.cos.ap-shanghai.myqcloud.com&#x2F;flask%E5%9F%BA%E7%A1%80&#x2F;20200317015904653.png">
+<meta property="og:image" content="http:&#x2F;&#x2F;my-picture-1258042328.cos.ap-shanghai.myqcloud.com&#x2F;flask%E5%9F%BA%E7%A1%80&#x2F;20200317015918908.png">
+<meta property="og:image" content="http:&#x2F;&#x2F;my-picture-1258042328.cos.ap-shanghai.myqcloud.com&#x2F;flask%E5%9F%BA%E7%A1%80&#x2F;20200317015930696.png">
+<meta property="og:image" content="http:&#x2F;&#x2F;my-picture-1258042328.cos.ap-shanghai.myqcloud.com&#x2F;flask%E5%9F%BA%E7%A1%80&#x2F;20200317071045490.png">
+<meta property="og:image" content="http:&#x2F;&#x2F;my-picture-1258042328.cos.ap-shanghai.myqcloud.com&#x2F;flask%E5%9F%BA%E7%A1%80&#x2F;20200317090928173.png">
+<meta property="og:image" content="http:&#x2F;&#x2F;my-picture-1258042328.cos.ap-shanghai.myqcloud.com&#x2F;flask%E5%9F%BA%E7%A1%80&#x2F;20200317095702710.png">
+<meta property="og:image" content="http:&#x2F;&#x2F;my-picture-1258042328.cos.ap-shanghai.myqcloud.com&#x2F;flask%E5%9F%BA%E7%A1%80&#x2F;20200317101121152.png">
+<meta property="og:updated_time" content="2020-03-17T15:19:34.533Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="http:&#x2F;&#x2F;my-picture-1258042328.cos.ap-shanghai.myqcloud.com&#x2F;flask%E5%9F%BA%E7%A1%80&#x2F;20200317011412171.png">
   
@@ -187,7 +195,9 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="Flask框架"><a href="#Flask框架" class="headerlink" title="Flask框架"></a>Flask框架</h1><h3 id="1-框架介绍"><a href="#1-框架介绍" class="headerlink" title="1.框架介绍"></a>1.框架介绍</h3><pre><code>Flask诞生于2010年，是Armin ronacher（人名）用 Python 语言编写的 **轻量级Web开发框架** ，其本身相当于一个内核，主要实现路**由分发和模板渲染功能**。</code></pre><p><strong>Flask中常用的扩展包：</strong></p>
+        <h1 id="Flask框架"><a href="#Flask框架" class="headerlink" title="Flask框架"></a>Flask框架</h1><h3 id="1-框架介绍"><a href="#1-框架介绍" class="headerlink" title="1.框架介绍"></a>1.框架介绍</h3><pre><code>Flask诞生于2010年，是Armin ronacher（人名）用 Python 语言编写的 **轻量级Web开发框架** ，其本身相当于一个内核，主要实现路**由分发和模板渲染功能**。</code></pre><a id="more"></a>
+
+<p><strong>Flask中常用的扩展包：</strong></p>
 <ul>
 <li>Flask-SQLalchemy：ORM操作数据库；</li>
 <li>Flask-RESTful：开发REST API的工具；</li>
@@ -203,9 +213,414 @@
 <li>Flask-Bootstrap：集成前端Twitter Bootstrap框架；</li>
 <li>Flask-Moment：本地化日期和时间；</li>
 </ul>
-<h3 id="2-创建应用"><a href="#2-创建应用" class="headerlink" title="2. 创建应用"></a>2. 创建应用</h3><h4 id="环境安装"><a href="#环境安装" class="headerlink" title="环境安装"></a>环境安装</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">mkvirtualenv flask_env -p python3 <span class="comment">#创建名为flask_env的虚拟环境，使用python3解释器</span></span><br><span class="line">pip install flask==<span class="number">1.0</span><span class="number">.3</span> <span class="comment">#安装版本为1.0.3的flask包</span></span><br></pre></td></tr></table></figure>
+<h3 id="2-基本使用"><a href="#2-基本使用" class="headerlink" title="2. 基本使用"></a>2. 基本使用</h3><h4 id="环境安装"><a href="#环境安装" class="headerlink" title="环境安装"></a>环境安装</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">mkvirtualenv flask_env -p python3 <span class="comment">#创建名为flask_env的虚拟环境，使用python3解释器</span></span><br><span class="line">pip install flask==<span class="number">1.0</span><span class="number">.3</span> <span class="comment">#安装版本为1.0.3的flask包</span></span><br></pre></td></tr></table></figure>
 
 <h4 id="在pycharm中新建flask项目"><a href="#在pycharm中新建flask项目" class="headerlink" title="在pycharm中新建flask项目"></a>在pycharm中新建flask项目</h4><p><img src="http://my-picture-1258042328.cos.ap-shanghai.myqcloud.com/flask%E5%9F%BA%E7%A1%80/20200317011412171.png" alt=""><br><img src="http://my-picture-1258042328.cos.ap-shanghai.myqcloud.com/flask%E5%9F%BA%E7%A1%80/20200317012812076.png" alt=""><br><img src="http://my-picture-1258042328.cos.ap-shanghai.myqcloud.com/flask%E5%9F%BA%E7%A1%80/20200317012830026.png" alt=""><br><img src="http://my-picture-1258042328.cos.ap-shanghai.myqcloud.com/flask%E5%9F%BA%E7%A1%80/20200317012846043.png" alt=""></p>
+<h4 id="新建一个helloflask-py文件"><a href="#新建一个helloflask-py文件" class="headerlink" title="新建一个helloflask.py文件"></a>新建一个helloflask.py文件</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> flask <span class="keyword">import</span> Flask <span class="comment"># 导入flask包</span></span><br><span class="line">app = Flask(__name__) <span class="comment">#创建flask对象，接收一个参数__name__,它会指向程序所在的包</span></span><br><span class="line"><span class="meta">@app.route('/') #定义路由</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">index</span><span class="params">()</span>:</span> <span class="comment">#视图</span></span><br><span class="line">    <span class="keyword">return</span> <span class="string">'hello flask'</span></span><br><span class="line"><span class="keyword">if</span> __name__==<span class="string">'__main__'</span>:</span><br><span class="line">    app.run() <span class="comment">#运行程序</span></span><br><span class="line"><span class="comment"># app.run()中可以添加参数</span></span><br><span class="line"><span class="comment"># host: 绑定的ip(域名)  0.0.0.0</span></span><br><span class="line"><span class="comment"># port: 监听的端口号</span></span><br><span class="line"><span class="comment"># debug: 是否开启调试模式  1&gt; 可以在网页上显示python错误 2&gt; 更新代码后测试服务器自动重启</span></span><br><span class="line"><span class="comment">#app.run(host='0.0.0.0', port=8000, debug=True)</span></span><br></pre></td></tr></table></figure>
+<p>运行结果：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">/home/ubuntu/.virtualenvs/flask_env/bin/python /home/ubuntu/PycharmProjects/flask2/helloflask.py</span><br><span class="line"> * Running on http://<span class="number">127.0</span><span class="number">.0</span><span class="number">.1</span>:<span class="number">5000</span>/ (Press CTRL+C to quit)</span><br><span class="line"> * Serving Flask app <span class="string">"helloflask"</span> (lazy loading)</span><br><span class="line"> * Environment: production</span><br><span class="line">   WARNING: This <span class="keyword">is</span> a development server. Do <span class="keyword">not</span> use it <span class="keyword">in</span> a production deployment.</span><br><span class="line">   Use a production WSGI server instead.</span><br><span class="line"> * Debug mode: off</span><br></pre></td></tr></table></figure>
+<h4 id="第二种运行文件的方式"><a href="#第二种运行文件的方式" class="headerlink" title="第二种运行文件的方式"></a>第二种运行文件的方式</h4><ul>
+<li>flask1.0开始, 类似Django, 通过终端执行封装的脚本命令flask run来运行应用, 不再需要调用app.run()</li>
+<li>新的形式更加有利于 灵活修改环境配置<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">export FLASK_APP=xx.py <span class="comment">#指定flask应用所在的文件路径</span></span><br><span class="line">export FLASK_ENV=development <span class="comment">#设置项目的环境，默认是生产环境</span></span><br><span class="line">flask run -h <span class="number">0.0</span><span class="number">.0</span><span class="number">.0</span> -p <span class="number">8000</span> <span class="comment">#启动测试服务器并接收请求</span></span><br></pre></td></tr></table></figure></li>
+<li>在ubuntu中可以通过命令查看和修改环境变量<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"># 获取环境变量</span><br><span class="line">export  # 查看所有环境变量</span><br><span class="line">echo $环境变量   # 查看指定的环境变量</span><br><span class="line"></span><br><span class="line"># 设置环境变量</span><br><span class="line">export 环境变量名=值  # 给本次会话设置环境变量, 一旦终端关闭, 环境变量会清空</span><br><span class="line"># 将环境变量写入配置文件(.bashrc/.bash_profile), 重新打开终端时再次加载环境变量</span><br></pre></td></tr></table></figure>
+<h4 id="第三中运行文件的方式"><a href="#第三中运行文件的方式" class="headerlink" title="第三中运行文件的方式"></a>第三中运行文件的方式</h4><img src="http://my-picture-1258042328.cos.ap-shanghai.myqcloud.com/flask%E5%9F%BA%E7%A1%80/20200317015832434.png" alt=""><br><img src="http://my-picture-1258042328.cos.ap-shanghai.myqcloud.com/flask%E5%9F%BA%E7%A1%80/20200317015904653.png" alt=""><br><img src="http://my-picture-1258042328.cos.ap-shanghai.myqcloud.com/flask%E5%9F%BA%E7%A1%80/20200317015918908.png" alt=""><br><img src="http://my-picture-1258042328.cos.ap-shanghai.myqcloud.com/flask%E5%9F%BA%E7%A1%80/20200317015930696.png" alt=""><h4 id="路由"><a href="#路由" class="headerlink" title="路由"></a>路由</h4><h5 id="1）定义路由"><a href="#1）定义路由" class="headerlink" title="1）定义路由"></a>1）定义路由</h5></li>
+<li>路由对应的URL必须以 / 开头</li>
+<li>app.route()中可以使用methods方法，作用是指定路由支持的请求方式</li>
+<li>可以使用app.url_map命令获取所有路由规则<ul>
+<li>路由规则中主要包含url资源段rule，支持的请求方式methods，视图函数标记endpoint三部分</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> flask <span class="keyword">import</span> Flask</span><br><span class="line">app=Flask(__name__)</span><br><span class="line"><span class="meta">@app.route('/hello',methods=['get','post'])</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">index</span><span class="params">()</span>:</span></span><br><span class="line">    <span class="keyword">return</span> <span class="string">'index'</span></span><br><span class="line"><span class="keyword">if</span> __name__==<span class="string">'__main__'</span>:</span><br><span class="line">    print(app.url_map)</span><br><span class="line">    <span class="comment"># 获取路由信息</span></span><br><span class="line">    print(<span class="string">'-----------------------------------'</span>)</span><br><span class="line">    <span class="keyword">for</span> rule <span class="keyword">in</span> app.url_map.iter_rules():</span><br><span class="line">        print(rule.rule, rule.methods, rule.endpoint)</span><br><span class="line">    <span class="comment"># 具体的获取每条路由信息中的项</span></span><br><span class="line">    app.run(debug=<span class="literal">True</span>)</span><br></pre></td></tr></table></figure>
+<p>运行结果：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">Map([&lt;Rule '/hello' (POST, OPTIONS, GET, HEAD) -&gt; index&gt;,</span><br><span class="line"> &lt;Rule '/static/&lt;filename&gt;' (OPTIONS, GET, HEAD) -&gt; static&gt;])</span><br><span class="line">-----------------------------------</span><br><span class="line">/hello &#123;<span class="string">'POST'</span>, <span class="string">'OPTIONS'</span>, <span class="string">'GET'</span>, <span class="string">'HEAD'</span>&#125; index</span><br><span class="line">/static/&lt;path:filename&gt; &#123;<span class="string">'OPTIONS'</span>, <span class="string">'GET'</span>, <span class="string">'HEAD'</span>&#125; static</span><br></pre></td></tr></table></figure>
+<p>网页效果：<br><img src="http://my-picture-1258042328.cos.ap-shanghai.myqcloud.com/flask%E5%9F%BA%E7%A1%80/20200317071045490.png" alt=""></p>
+<h5 id="2）路由变量"><a href="#2）路由变量" class="headerlink" title="2）路由变量"></a>2）路由变量</h5><ul>
+<li>用于传递url路径参数，实现动态url</li>
+<li>格式：/路径/&lt;路由变量&gt;<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> flask <span class="keyword">import</span> Flask</span><br><span class="line">app=Flask(__name__)</span><br><span class="line"><span class="meta">@app.route('/user/&lt;userid&gt;')</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">index</span><span class="params">(userid)</span>:</span></span><br><span class="line">    print(userid)</span><br><span class="line">    <span class="keyword">return</span> <span class="string">'index'</span></span><br><span class="line"><span class="keyword">if</span> __name__==<span class="string">'__main__'</span>:</span><br><span class="line">    app.run(debug=<span class="literal">True</span>)</span><br></pre></td></tr></table></figure>
+使用postment发送get请求：<a href="http://127.0.0.1:5000/user/18240118472" target="_blank" rel="noopener">http://127.0.0.1:5000/user/18240118472</a><br>运行结果：<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">18240118472</span></span><br><span class="line"><span class="number">127.0</span><span class="number">.0</span><span class="number">.1</span> - - [<span class="number">17</span>/Mar/<span class="number">2020</span> <span class="number">19</span>:<span class="number">49</span>:<span class="number">30</span>] <span class="string">"GET /user/18240118472 HTTP/1.1"</span> <span class="number">200</span> -</span><br></pre></td></tr></table></figure>
+<h5 id="3-路由转换器"><a href="#3-路由转换器" class="headerlink" title="3)路由转换器"></a>3)路由转换器</h5></li>
+<li>作用是对url传递对的参数进行格式校验，类似django设置url时的正则表达式参数</li>
+<li>格式：/路径/&lt;转换器名:路由变量&gt;</li>
+<li>所有路由转换器都继承自BaseConverter类<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> flask <span class="keyword">import</span> Flask</span><br><span class="line">app = Flask(__name__)</span><br><span class="line"><span class="meta">@app.route('/user/&lt;int:userid&gt;')</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">index</span><span class="params">(userid)</span>:</span></span><br><span class="line">    print(userid)</span><br><span class="line">    <span class="keyword">return</span> <span class="string">'index'</span></span><br><span class="line"><span class="keyword">if</span> __name__==<span class="string">'__main__'</span>:</span><br><span class="line">    app.run()</span><br></pre></td></tr></table></figure>
+使用postment分别发送get请求：<a href="http://127.0.0.1:5000/user/18240" target="_blank" rel="noopener">http://127.0.0.1:5000/user/18240</a><br><a href="http://127.0.0.1:5000/user/18240a" target="_blank" rel="noopener">http://127.0.0.1:5000/user/18240a</a><br>运行结果分别为：<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">18240</span></span><br><span class="line"><span class="number">127.0</span><span class="number">.0</span><span class="number">.1</span> - - [<span class="number">17</span>/Mar/<span class="number">2020</span> <span class="number">20</span>:<span class="number">03</span>:<span class="number">42</span>] <span class="string">"GET /user/18240 HTTP/1.1"</span> <span class="number">200</span> -</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">127.0</span><span class="number">.0</span><span class="number">.1</span> - - [<span class="number">17</span>/Mar/<span class="number">2020</span> <span class="number">20</span>:<span class="number">05</span>:<span class="number">00</span>] <span class="string">"GET /user/18240a HTTP/1.1"</span> <span class="number">404</span> -</span><br></pre></td></tr></table></figure>
+<h5 id="4）自定义路由转换器"><a href="#4）自定义路由转换器" class="headerlink" title="4）自定义路由转换器"></a>4）自定义路由转换器</h5></li>
+<li>路由转换器可以由开发者自定义，自定义路由转换器的步骤<ul>
+<li>定义路由转换器类，继承BaseConverter类</li>
+<li>设置regex属性（正则匹配规则）</li>
+<li>为应用添加自定义路由转换器<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> flask <span class="keyword">import</span> Flask</span><br><span class="line"><span class="keyword">from</span> werkzeug.routing <span class="keyword">import</span> BaseConverter</span><br><span class="line">app = Flask(__name__)</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">CustomConverter</span><span class="params">(BaseConverter)</span>:</span></span><br><span class="line">    regex = <span class="string">'\w&#123;3&#125;'</span> <span class="comment"># 3个字符</span></span><br><span class="line">app.url_map.converters[<span class="string">'abc'</span>]=CustomConverter</span><br><span class="line"><span class="meta">@app.route('/user/&lt;abc:mobile&gt;')</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">index</span><span class="params">(mobile)</span>:</span></span><br><span class="line">    print(mobile)</span><br><span class="line">    <span class="keyword">return</span> <span class="string">'index'</span></span><br><span class="line"><span class="keyword">if</span> __name__==<span class="string">'__main__'</span>:</span><br><span class="line">    print(app.url_map.converters) <span class="comment">#打印所有路由转换器</span></span><br><span class="line">    print(<span class="string">'------------------'</span>)</span><br><span class="line">    app.run()</span><br></pre></td></tr></table></figure>
+使用postment分别发送get请求：<a href="http://127.0.0.1:5000/user/zhu" target="_blank" rel="noopener">http://127.0.0.1:5000/user/zhu</a><br>运行结果：<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">lt<span class="string">': &lt;class '</span>werkzeug.routing.UnicodeConverte<span class="string">r'&gt;, '</span>string<span class="string">': &lt;class '</span>werkzeug.routing.UnicodeConverte<span class="string">r'&gt;, '</span>any<span class="string">': &lt;class '</span>werkzeug.routing.AnyConverte<span class="string">r'&gt;, '</span>path<span class="string">': &lt;class '</span>werkzeug.routing.PathConverte<span class="string">r'&gt;, '</span>int<span class="string">': &lt;class '</span>werkzeug.routing.IntegerConverte<span class="string">r'&gt;, '</span>float<span class="string">': &lt;class '</span>werkzeug.routing.FloatConverte<span class="string">r'&gt;, '</span>uuid<span class="string">': &lt;class '</span>werkzeug.routing.UUIDConverte<span class="string">r'&gt;, '</span>abc<span class="string">': &lt;class '</span>__main__.CustomConverte<span class="string">r'&gt;&#125;</span></span><br><span class="line"><span class="string">------------------</span></span><br><span class="line"><span class="string">zhu</span></span><br><span class="line"><span class="string">127.0.0.1 - - [17/Mar/2020 20:24:04] "GET /user/zhu HTTP/1.1" 200 -</span></span><br></pre></td></tr></table></figure>
+<h4 id="请求"><a href="#请求" class="headerlink" title="请求"></a>请求</h4></li>
+</ul>
+</li>
+<li>flask中的请求数据通过request对象来获取</li>
+<li>常用的请求属性：<br>属性    说明    类型<br>url    记录请求的URL地址    str<br>method    记录请求使用的HTTP方法    str<br>headers    记录请求中的报文头    EnvironHeaders 类字典对象<br>args    记录请求中的查询参数    MultiDict<br>form    记录请求中的表单数据    MultiDict<br>data    记录请求的数据，并转换为字符串    bytes<br>json    记录请求体中的json数据    Dict<br>files    记录请求上传的文件    MultiDict[str: FileStorage]</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th align="center">属性</th>
+<th align="center">说明</th>
+<th align="center">类型</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">url</td>
+<td align="center">记录请求的URL地址</td>
+<td align="center">str</td>
+</tr>
+<tr>
+<td align="center">method</td>
+<td align="center">记录请求使用的HTTP方法</td>
+<td align="center">str</td>
+</tr>
+<tr>
+<td align="center">headers</td>
+<td align="center">记录请求中的报文头</td>
+<td align="center">EnvironHeaders 类字典对象</td>
+</tr>
+<tr>
+<td align="center">args</td>
+<td align="center">记录请求中的查询参数</td>
+<td align="center">MultiDict</td>
+</tr>
+<tr>
+<td align="center">form</td>
+<td align="center">记录请求中的表单数据</td>
+<td align="center">MultiDict</td>
+</tr>
+<tr>
+<td align="center">data</td>
+<td align="center">记录请求的数据，并转换为字符串</td>
+<td align="center">bytes</td>
+</tr>
+<tr>
+<td align="center">json</td>
+<td align="center">记录请求体中的json数据</td>
+<td align="center">Dict</td>
+</tr>
+<tr>
+<td align="center">files</td>
+<td align="center">记录请求上传的文件</td>
+<td align="center">MultiDict[str: FileStorage]</td>
+</tr>
+<tr>
+<td align="center"><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> flask <span class="keyword">import</span> Flask, request</span><br><span class="line"><span class="comment"># from werkzeug.datastructures import FileStorage</span></span><br><span class="line"></span><br><span class="line">app = Flask(__name__)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="meta">@app.route('/', methods=['get', 'post'])</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">index</span><span class="params">()</span>:</span></span><br><span class="line">    <span class="comment"># 获取请求的基础数据</span></span><br><span class="line">    <span class="comment"># print(request.url)  # 请求的URL</span></span><br><span class="line">    <span class="comment"># print(request.method)  # 本次请求的请求方式</span></span><br><span class="line">    <span class="comment"># print(request.headers)  # 获取请求头信息  类字典对象</span></span><br><span class="line"></span><br><span class="line">    <span class="comment"># print(request.headers['Host'])</span></span><br><span class="line">    <span class="comment"># print(request.headers.get('Host'))  # 建议使用get方法, 键不存在不报错</span></span><br><span class="line"></span><br><span class="line">    <span class="comment"># 请求传递数据 1&gt; URL路径 -&gt; 路由变量  2&gt; 查询字符串 get  3&gt; 请求体  post  4&gt; 请求头 -&gt; request.headers</span></span><br><span class="line"></span><br><span class="line">    <span class="comment"># 获取查询字符串 -&gt; request.args  xx?name=zs&amp;age=20  类字典对象</span></span><br><span class="line">    <span class="comment"># print(request.args.get('name'))</span></span><br><span class="line">    <span class="comment"># print(request.args.get('age'))</span></span><br><span class="line"></span><br><span class="line">    <span class="comment"># 请求体:   键值对(表单)   文本(json/xml)  文件(图片/音频)</span></span><br><span class="line"></span><br><span class="line">    <span class="comment"># 获取post键值对 -&gt; request.form  类字典对象</span></span><br><span class="line">    <span class="comment"># print(request.form.get('username'))</span></span><br><span class="line"></span><br><span class="line">    <span class="comment"># 获取post文本数据 -&gt; request.data / request.json</span></span><br><span class="line">    <span class="comment"># print(request.data)  # 返回bytes类型</span></span><br><span class="line">    <span class="comment"># print(request.json.get('age'))  # request.json直接将json字符串转为字典</span></span><br><span class="line"></span><br><span class="line">    <span class="comment"># 获取post文件 -&gt; request.files  类字典对象</span></span><br><span class="line">    file = request.files.get(<span class="string">"avatar"</span>)  <span class="comment"># type: FileStorage</span></span><br><span class="line">    <span class="comment"># print(type(file))  # 返回 FileStorage文件对象</span></span><br><span class="line">    <span class="comment"># 将文件保存到本地</span></span><br><span class="line">    file.save(<span class="string">'4323.jpg'</span>)</span><br><span class="line"></span><br><span class="line">    <span class="comment"># 获取文件的二进制数据</span></span><br><span class="line">    <span class="comment"># img_bytes = file.read()</span></span><br><span class="line">    <span class="comment"># print(img_bytes)</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="string">"index"</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">'__main__'</span>:</span><br><span class="line">    app.run(debug=<span class="literal">True</span>)</span><br></pre></td></tr></table></figure></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">使用postman发送请求：</td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center"><img src="http://my-picture-1258042328.cos.ap-shanghai.myqcloud.com/flask%E5%9F%BA%E7%A1%80/20200317090928173.png" alt=""></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">运行结果：</td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">项目中会新出现一个4323.jpg文件</td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center"><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">127.0</span><span class="number">.0</span><span class="number">.1</span> - - [<span class="number">17</span>/Mar/<span class="number">2020</span> <span class="number">21</span>:<span class="number">05</span>:<span class="number">48</span>] <span class="string">"GET / HTTP/1.1"</span> <span class="number">200</span> -</span><br></pre></td></tr></table></figure></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">#### 响应</td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">##### 1)访问静态资源</td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">- 可以将静态资源放入项目的static文件夹中，通过内置的静态资源访问路由</td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">- 如 static目录放入文件 123.jpg, 则访问URL为 <a href="http://127.0.0.1:5000/static/123.jpg" target="_blank" rel="noopener">http://127.0.0.1:5000/static/123.jpg</a></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">- 可以通过修改flask对象的初始化参数来修改静态资源的存储和访问路径</td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">- static_folder 修改静态文件的存储目录</td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">- static_url_path 修改静态文件的访问路径</td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center"><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> flask <span class="keyword">import</span> Flask</span><br><span class="line"></span><br><span class="line">app = Flask(__name__,  <span class="comment"># 导入名称, flask会根据该参数查询静态文件的存储路径</span></span><br><span class="line">            <span class="comment"># 官方建议直接使用__name__, 表示从当前目录中查询静态文件存储路径</span></span><br><span class="line">            static_folder=<span class="string">"static1"</span>,  <span class="comment"># 设置静态文件的存储目录</span></span><br><span class="line">            static_url_path=<span class="string">'/res/img'</span>,  <span class="comment"># 设置静态文件的URL访问路径 如 127.0.0.1:5000/res/img/123.jpg</span></span><br><span class="line">            )</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">'__main__'</span>:</span><br><span class="line">    app.run(debug=<span class="literal">True</span>)</span><br></pre></td></tr></table></figure></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">##### 2)自定义响应对象</td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">- 视图函数返回的str/bytes类型的数据会被自动包装为Response响应对象，也可以通过创建Response响应对象来自定义响应头等信息</td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center"><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> flask <span class="keyword">import</span> Flask, make_response, Response</span><br><span class="line">app= Flask(__name__)</span><br><span class="line"><span class="meta">@app.route('/demo')</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">demo</span><span class="params">()</span>:</span></span><br><span class="line">    response = make_response(<span class="string">'hello'</span>)</span><br><span class="line">    response.header[<span class="string">'A'</span>]=<span class="number">10</span></span><br><span class="line">    <span class="keyword">return</span> response</span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">'__main__'</span>:</span><br><span class="line">    app.run()</span><br></pre></td></tr></table></figure></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">通过postman查看返回的自定义响应头：</td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center"><img src="http://my-picture-1258042328.cos.ap-shanghai.myqcloud.com/flask%E5%9F%BA%E7%A1%80/20200317095702710.png" alt=""></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">##### 3)返回json</td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">- 如果接口现需要返回json数据，在flask中可以直接使用jsonify()函数生成一个json的响应</td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">- 不推荐时使用json.dumps()直接返回，因为返回的数据要符合 HTTP 协议规范，如果是 JSON 需要指定 content-type:application/json</td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center"><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> flask <span class="keyword">import</span> Flask, make_response, Response,jsonify</span><br><span class="line"><span class="comment"># import json</span></span><br><span class="line">app = Flask(__name__)</span><br><span class="line"><span class="meta">@app.route('demo')</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">demo</span><span class="params">()</span>:</span></span><br><span class="line">    dict_=&#123;<span class="string">'name'</span>:<span class="string">'zhu'</span>,<span class="string">'age'</span>:<span class="number">24</span>&#125;</span><br><span class="line">    <span class="keyword">return</span> jsonify(dict_)</span><br><span class="line">    <span class="comment"># return json.dumps(dict_)</span></span><br><span class="line"><span class="keyword">if</span> __name__==<span class="string">'__main__'</span>:</span><br><span class="line">    app.run()</span><br></pre></td></tr></table></figure></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">通过postman查看返回的自定义响应：</td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center"><img src="http://my-picture-1258042328.cos.ap-shanghai.myqcloud.com/flask%E5%9F%BA%E7%A1%80/20200317101121152.png" alt=""></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">##### 4)重定向</td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">- flask中通过redirect()函数实现重定向功能</td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">- 配合url反向解析函数url_for()可以减少url重构的开发量</td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center"><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> flask <span class="keyword">import</span> Flask,redirect,url_for</span><br><span class="line">app=Flask(__name__)</span><br><span class="line"><span class="meta">@app.route('/demo1')</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">demo1</span><span class="params">()</span>:</span></span><br><span class="line">    url_=url_for(<span class="string">'demo2'</span>,userid=<span class="number">1</span>)</span><br><span class="line">    <span class="keyword">return</span> redirect(url_)</span><br><span class="line"><span class="meta">@app.route('/demo2/&lt;userid&gt;')</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">demo2</span><span class="params">(userid)</span>:</span></span><br><span class="line">    print(userid)</span><br><span class="line">    <span class="keyword">return</span> <span class="string">'demo2'</span></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">'__main__'</span>:</span><br><span class="line">    app.run()</span><br></pre></td></tr></table></figure></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">运行结果：</td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center"><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">127.0</span><span class="number">.0</span><span class="number">.1</span> - - [<span class="number">17</span>/Mar/<span class="number">2020</span> <span class="number">22</span>:<span class="number">40</span>:<span class="number">22</span>] <span class="string">"GET /demo1 HTTP/1.1"</span> <span class="number">302</span> -</span><br><span class="line"><span class="number">127.0</span><span class="number">.0</span><span class="number">.1</span> - - [<span class="number">17</span>/Mar/<span class="number">2020</span> <span class="number">22</span>:<span class="number">40</span>:<span class="number">22</span>] <span class="string">"GET /demo2/1 HTTP/1.1"</span> <span class="number">200</span> -</span><br><span class="line"><span class="number">1</span></span><br></pre></td></tr></table></figure></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">##### 5)响应状态码</td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center"><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> flask <span class="keyword">import</span> Flask, redirect, url_for</span><br><span class="line"></span><br><span class="line">app = Flask(__name__)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="meta">@app.route('/demo5')</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">demo5</span><span class="params">()</span>:</span></span><br><span class="line">    <span class="comment"># 可以通过第二个返回值 来设置自定义的响应状态码   实现自定义的交互规则 700 密码错误 701 用户不存在</span></span><br><span class="line"></span><br><span class="line">    <span class="comment"># 返回值:  响应体, 响应状态码, 响应头</span></span><br><span class="line">    <span class="keyword">return</span> <span class="string">'demo5'</span>, <span class="number">700</span>, &#123;<span class="string">'B'</span>: <span class="number">40</span>&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">'__main__'</span>:</span><br><span class="line">    app.run(debug=<span class="literal">True</span>)</span><br></pre></td></tr></table></figure></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">运行结果：</td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center"><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">127.0</span><span class="number">.0</span><span class="number">.1</span> - - [<span class="number">17</span>/Mar/<span class="number">2020</span> <span class="number">22</span>:<span class="number">44</span>:<span class="number">25</span>] <span class="string">"GET /demo HTTP/1.1"</span> <span class="number">700</span> -</span><br></pre></td></tr></table></figure></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">#### 状态保持</td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">##### 1）cookie</td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">- 特点</td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">- 将数据保存在客户端，可以减轻服务器的压力</td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">- 访问网站时，浏览器将自动发送cookie数据给服务器</td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">- 一般用于保存一些不太重要的数据</td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">- 设置cookie：response.set_cookie(键，值，max_age=最大生存时间)</td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">- 获取cookie：ressponse.cookie.get(键)</td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">- 删除cookie：response.delete_cookie(键)，删除cookie的本质是将max_age设置为0</td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center"><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> flask <span class="keyword">import</span> Flask ,make_response, Response, request</span><br><span class="line">app =Flask(__name__)</span><br><span class="line"><span class="meta">@app.route('/demo1')</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">demo1</span><span class="params">()</span>:</span></span><br><span class="line">    response= make_response()</span><br><span class="line">    response.set_cookie(<span class="string">'name'</span>,<span class="string">'zhu'</span>,max_age=<span class="number">600</span>)</span><br><span class="line">    <span class="keyword">return</span> response</span><br><span class="line"><span class="meta">@app.route('/demo2')</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">demo2</span><span class="params">()</span>:</span></span><br><span class="line">    print(request.cookies.get(<span class="string">'name'</span>))</span><br><span class="line">    <span class="keyword">return</span> <span class="string">'demo2'</span></span><br><span class="line"><span class="keyword">if</span> __name__==<span class="string">"__main__"</span>:</span><br><span class="line">    app.run()</span><br></pre></td></tr></table></figure></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">运行结果：</td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center"><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">127.0</span><span class="number">.0</span><span class="number">.1</span> - - [<span class="number">17</span>/Mar/<span class="number">2020</span> <span class="number">22</span>:<span class="number">59</span>:<span class="number">31</span>] <span class="string">"GET /demo1 HTTP/1.1"</span> <span class="number">200</span> -</span><br><span class="line"><span class="number">127.0</span><span class="number">.0</span><span class="number">.1</span> - - [<span class="number">17</span>/Mar/<span class="number">2020</span> <span class="number">22</span>:<span class="number">59</span>:<span class="number">35</span>] <span class="string">"GET /demo2 HTTP/1.1"</span> <span class="number">200</span> -</span><br><span class="line">zhu</span><br></pre></td></tr></table></figure></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">##### 2）session</td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">- 特点：将数据保存在服务端</td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">- 一般用来保存一些重要或敏感的数据</td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">- 设置应用密钥，用于session签名：app.secret_key =’test’</td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">- 设置session过期时间，默认31天：app.permanent_session_lifetime = timedelta(days=天数)</td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">- 设置session:session[键]=值</td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">- 设置session是否支持过期时间:session.permanent = True</td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">- 删除session：session.pop(键)</td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">- 获取session: session.get(键)</td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">- flask的默认session机制 没有将session数据保存到服务器的数据库中, 而是将session数据编码后保存到了cookie中 (签名cookie机制)</td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">- 可以使用 flask-session组件 来实现传统的session存储</td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center"><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> flask <span class="keyword">import</span> Flask session</span><br><span class="line"><span class="keyword">from</span> datetime <span class="keyword">import</span> timedelta</span><br><span class="line">app=Flask(__name__)</span><br><span class="line">app.secret_key =<span class="string">'test'</span></span><br><span class="line">app.permanent_session_lifetime = timedelta(days=<span class="number">7</span>)</span><br><span class="line"><span class="meta">@app.route('/demo1')</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">demo1</span><span class="params">()</span>:</span></span><br><span class="line">    session[<span class="string">'password'</span>]= <span class="string">'123'</span></span><br><span class="line">    session.permanent=<span class="literal">True</span></span><br><span class="line">    <span class="keyword">return</span> <span class="string">'demo1'</span></span><br><span class="line"><span class="meta">@app.route('/demo2')</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">demo2</span><span class="params">()</span>:</span></span><br><span class="line">    print(session.get(<span class="string">'password'</span>))</span><br><span class="line">    <span class="keyword">return</span> <span class="string">'demo2'</span></span><br><span class="line"><span class="keyword">if</span> __name__==<span class="string">'__main__'</span>:</span><br><span class="line">    app.run()</span><br></pre></td></tr></table></figure></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">运行结果：</td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center"><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">127.0</span><span class="number">.0</span><span class="number">.1</span> - - [<span class="number">17</span>/Mar/<span class="number">2020</span> <span class="number">23</span>:<span class="number">16</span>:<span class="number">44</span>] <span class="string">"GET /demo1 HTTP/1.1"</span> <span class="number">200</span> -</span><br><span class="line"><span class="number">123</span></span><br><span class="line"><span class="number">127.0</span><span class="number">.0</span><span class="number">.1</span> - - [<span class="number">17</span>/Mar/<span class="number">2020</span> <span class="number">23</span>:<span class="number">17</span>:<span class="number">11</span>] <span class="string">"GET /demo2 HTTP/1.1"</span> <span class="number">200</span> -</span><br></pre></td></tr></table></figure></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">#### 异常处理</td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">### 3.高级处理</td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+</tbody></table>
 
       
       
@@ -358,7 +773,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Flask框架"><span class="toc-number">1.</span> <span class="toc-text">Flask框架</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-框架介绍"><span class="toc-number">1.0.1.</span> <span class="toc-text">1.框架介绍</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-创建应用"><span class="toc-number">1.0.2.</span> <span class="toc-text">2. 创建应用</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#环境安装"><span class="toc-number">1.0.2.1.</span> <span class="toc-text">环境安装</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#在pycharm中新建flask项目"><span class="toc-number">1.0.2.2.</span> <span class="toc-text">在pycharm中新建flask项目</span></a></li></ol></li></ol></li></ol></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Flask框架"><span class="toc-number">1.</span> <span class="toc-text">Flask框架</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-框架介绍"><span class="toc-number">1.0.1.</span> <span class="toc-text">1.框架介绍</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-基本使用"><span class="toc-number">1.0.2.</span> <span class="toc-text">2. 基本使用</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#环境安装"><span class="toc-number">1.0.2.1.</span> <span class="toc-text">环境安装</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#在pycharm中新建flask项目"><span class="toc-number">1.0.2.2.</span> <span class="toc-text">在pycharm中新建flask项目</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#新建一个helloflask-py文件"><span class="toc-number">1.0.2.3.</span> <span class="toc-text">新建一个helloflask.py文件</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#第二种运行文件的方式"><span class="toc-number">1.0.2.4.</span> <span class="toc-text">第二种运行文件的方式</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#第三中运行文件的方式"><span class="toc-number">1.0.2.5.</span> <span class="toc-text">第三中运行文件的方式</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#路由"><span class="toc-number">1.0.2.6.</span> <span class="toc-text">路由</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#1）定义路由"><span class="toc-number">1.0.2.6.1.</span> <span class="toc-text">1）定义路由</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#2）路由变量"><span class="toc-number">1.0.2.6.2.</span> <span class="toc-text">2）路由变量</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#3-路由转换器"><span class="toc-number">1.0.2.6.3.</span> <span class="toc-text">3)路由转换器</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#4）自定义路由转换器"><span class="toc-number">1.0.2.6.4.</span> <span class="toc-text">4）自定义路由转换器</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#请求"><span class="toc-number">1.0.2.7.</span> <span class="toc-text">请求</span></a></li></ol></li></ol></li></ol></li></ol>
                     </div>
                 </span>
             </div>
